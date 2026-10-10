@@ -36,6 +36,7 @@
       --green: #2d5145;
       --rust: #975235;
       --line: #d6dad0;
+      --section-line: #929f92;
       --wash: #e9ede3;
       --serif: Baskerville, "Palatino Linotype", "Book Antiqua", Palatino, serif;
       --sans: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
@@ -57,8 +58,9 @@
     nav { display: flex; gap: 30px; font-size: 13px; }
     nav a { text-decoration: none; }
     .eyebrow, .section-label, .meta, .art-label { font: 11px/1.7 var(--mono); text-transform: uppercase; letter-spacing: .13em; }
-    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--green); }
-    .eyebrow::before { content: ""; width: 6px; height: 6px; background: var(--rust); border-radius: 50%; }
+    .affiliation { display: inline-flex; align-items: center; gap: 15px; text-decoration: none; }
+    .university-emblem { width: 52px; height: 52px; flex-shrink: 0; padding: 4px; border-radius: 50%; background: #fffef9; }
+    .eyebrow { color: var(--green); }
     .hero { display: grid; grid-template-columns: 1.45fr 1fr; align-items: center; gap: 68px; padding-block: 78px 74px; }
     h1 { margin: 18px 0 0; font: 400 clamp(72px, 8.8vw, 122px)/1 var(--serif); letter-spacing: -.065em; }
     h1 em { color: var(--green); font-weight: 400; }
@@ -84,7 +86,8 @@
     .section-label { margin: 0; color: var(--green); font-weight: 400; }
     .section-label span { margin-right: 20px; color: var(--rust); }
     .section-note { margin: 0; color: var(--muted); font-size: 12px; }
-    .publication-section { padding-block: 38px 55px; border-top: 1px solid var(--ink); }
+    .publication-section, .research-section, .about-section, .contact-section { border-top: 1px solid var(--section-line); }
+    .publication-section { padding-block: 38px 55px; }
     .publication { display: grid; grid-template-columns: 150px 1fr; gap: 35px; }
     .venue { margin: 0; color: var(--green); font: 27px/1.2 var(--serif); }
     .venue em { display: block; margin-top: 5px; color: var(--rust); font-size: 43px; font-style: normal; }
@@ -93,25 +96,27 @@
     .paper-title a { text-decoration: none; }
     .authors { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
     .authors strong { color: var(--ink); font-weight: 600; }
+    .authors sup { color: var(--rust); font-size: .85em; line-height: 0; }
+    .corresponding-note { margin: -6px 0 14px; color: var(--muted); font-size: 11px; }
     .paper-summary { max-width: 710px; margin: 0; color: var(--muted); font-size: 14px; }
     .paper-links { display: flex; flex-wrap: wrap; gap: 12px 26px; margin-top: 23px; font-size: 13px; }
     .paper-links a { color: var(--green); text-decoration: none; }
     .paper-links a:hover { color: var(--rust); }
     .paper-links span { margin-left: 6px; }
-    .research-section { padding-block: 38px 49px; border-top: 1px solid var(--line); }
+    .research-section { padding-block: 38px 49px; }
     .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 29px 55px; }
     .research-item { border-top: 1px solid var(--line); padding-top: 20px; }
     .research-item .meta { margin: 0 0 16px; color: var(--rust); font-size: 10px; }
     .research-item h3 { margin: 0 0 11px; font: 25px/1.2 var(--serif); letter-spacing: -.015em; }
     .research-item p:last-child { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
-    .about-section { display: grid; grid-template-columns: 150px 1fr; gap: 35px; padding-block: 38px 48px; border-top: 1px solid var(--line); }
+    .about-section { display: grid; grid-template-columns: 150px 1fr; gap: 35px; padding-block: 38px 48px; }
     .about-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: 55px; }
     .about-copy > p { margin: 0; max-width: 510px; font-size: 14px; color: var(--muted); }
     .education { padding-left: 24px; border-left: 1px solid var(--line); }
     .education .meta { margin: 0 0 12px; color: var(--rust); font-size: 10px; }
     .education h3 { margin: 0; font: 22px/1.3 var(--serif); }
     .education p:last-child { margin: 9px 0 0; color: var(--muted); font-size: 12px; }
-    .contact-section { display: flex; justify-content: space-between; align-items: end; gap: 30px; border-top: 1px solid var(--ink); padding-block: 38px 40px; }
+    .contact-section { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding-block: 38px 40px; }
     .contact-section h2 { margin: 10px 0 0; font: 36px/1.2 var(--serif); letter-spacing: -.02em; }
     .contact-email { color: var(--green); font-size: 16px; white-space: nowrap; }
     .site-footer { display: flex; justify-content: space-between; gap: 20px; padding-block: 20px 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
@@ -138,6 +143,8 @@
       .hero { grid-template-columns: 1fr; padding-block: 45px 38px; gap: 30px; }
       h1 { margin-top: 17px; font-size: clamp(68px, 17vw, 96px); }
       .eyebrow { font-size: 9px; letter-spacing: .09em; }
+      .affiliation { gap: 12px; }
+      .university-emblem { width: 44px; height: 44px; }
       .role { margin-top: 20px; font-size: 13px; }
       .intro { max-width: 440px; font-size: 24px; }
       .profile-links { margin-top: 23px; font-size: 12px; gap: 10px 22px; }
@@ -177,6 +184,7 @@
         --green: #b7d2b4;
         --rust: #e3a282;
         --line: #3c4c40;
+        --section-line: #839582;
         --wash: #202e25;
       }
     }
@@ -200,7 +208,10 @@
     <main id="main">
       <section class="hero" aria-labelledby="name">
         <div class="hero-copy">
-          <p class="eyebrow">Beijing Jiaotong University</p>
+          <a class="affiliation" href="https://www.bjtu.edu.cn/">
+            <img class="university-emblem" src="assets/bjtu-emblem.png" width="52" height="52" alt="" decoding="async">
+            <span class="eyebrow">Beijing Jiaotong University</span>
+          </a>
           <h1 id="name">Sisi <em>Zhu.</em></h1>
           <p class="role">Undergraduate researcher</p>
           <p class="intro">Exploring vision, language,<br>and more efficient models.</p>
@@ -242,7 +253,8 @@
           </div>
           <div>
             <h3 class="paper-title"><a href="https://arxiv.org/abs/2608.29467">Co-Evolutionary Prompt Optimization with Cross-Category Transfer for Zero-Shot Anomaly Detection</a></h3>
-            <p class="authors"><strong>Sisi Zhu</strong>, Changwei Yu, Renshuai Tao, Zhenliang Ni</p>
+            <p class="authors"><strong>Sisi Zhu</strong>, Changwei Yu, Renshuai Tao<sup aria-describedby="corresponding-note">*</sup>, Zhenliang Ni</p>
+            <p id="corresponding-note" class="corresponding-note">* Corresponding author</p>
             <p class="paper-summary">CoEvoAD searches for explicit natural-language prompt rules using co-evolutionary optimization. A cross-category transfer objective uses held-out source categories to support generalization to unseen categories.</p>
             <div class="paper-links" aria-label="CoEvoAD resources">
               <a href="https://arxiv.org/abs/2608.29467">Read paper <span aria-hidden="true">↗</span></a>
