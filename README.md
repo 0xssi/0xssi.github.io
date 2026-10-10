@@ -1,31 +1,21 @@
-# Sisi Zhu
+# Academic homepage
 
-Undergraduate Student  
-School of Computer Science and Technology  
-Beijing Jiaotong University  
-Beijing, China  
+Public site: <https://0xssi.github.io/>.
 
-Email: your_email@example.com
+This is a single-page academic profile built with HTML, inline CSS, and an inline SVG illustration. It includes current work on model pruning and efficient inference, the CoEvoAD publication, research interests, education, contact information, and verified Google Scholar, ORCID, and GitHub links.
 
-## About Me
+## Preview and edit
 
-I am an undergraduate student in the School of Computer Science and Technology at Beijing Jiaotong University.
+Edit `index.html`, then open it in a browser or serve the repository locally:
 
-My current research interests include computer vision, vision-language models, zero-shot anomaly detection, industrial anomaly detection, prompt learning, and large language models.
+```sh
+python3 -m http.server 8812 --bind 127.0.0.1
+```
 
-## Research Interests
+Open <http://127.0.0.1:8812/>. No package installation or build step is required. The page adapts to mobile screens, follows the system light/dark preference, and respects reduced motion.
 
-- Computer Vision
-- Vision-Language Models
-- Zero-Shot Anomaly Detection
-- Industrial Anomaly Detection
-- Anomaly Localization
-- Prompt Learning and Prompt Optimization
-- Large Language Models
-- Multimodal Learning
+## Publishing
 
-## Education
+GitHub Pages serves the repository root on `main`. Push a reviewed change to `main` and verify the Pages build and live page before reporting a deployment complete.
 
-**Beijing Jiaotong University**  
-B.Eng. Student, School of Computer Science and Technology  
-2024 - Present
+Keep publication titles, authors, venue details, and account links aligned with their verified public records. The current publication source is <https://arxiv.org/abs/2608.29467>. Do not add unverified author profiles, metrics, awards, or release claims.
